@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Launchpad - Product Page</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/cryptPad.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/project.css">
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>CryptPad <em>Launchpad</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active" id="home">
+                <a class="nav-link" href="index.html">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li> 
+              <li class="nav-item" id="user_profile">
+                <a class="nav-link" href="investmentUser.html">Profile</a>
+              </li>
+              <li class="nav-item" id="admin_add_project">
+                <a class="nav-link" href="addProject.html">Add Project</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+<!-- Page Content -->
+<div class="page-heading products-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-content">
+          <h4>Crytocurrencies Launchpad</h4>
+          <h2>All projects</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="products">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="filters">
+          <ul>
+              <li class="active" data-filter="*">All Projects</li>
+              <li data-filter=".new">New</li>
+              <li data-filter=".success">Success</li>
+              <li data-filter=".failed">Failed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="filters-content">
+            <div id="projectsRow" class="row grid">
+
+              <!-- for demo purpose -->
+              <div class="col-lg-4 col-md-4 all failed" >
+                <div class="product-item">
+                  <div class="down-content">
+                    <h4 class="project-name">Aestic</h4>
+                    <h6 class="project-status">Failed</h6>
+                    <p class="project-token-name">Token Name: AES </p> 
+                    <p class="project-apy">Interest Rate: 2.5%</p>
+                    <div class="w3-light-grey">
+                      <div class="w3-container w3-red w3-center" style="width:50%">50%</div>
+                    </div><br>
+                    <span class="project-total-raised">5000/10000</span>
+                  </div>
+                  <button class="btn-MoreInfo" disabled>More Info</button>
+                </div>
+              </div>
+
+                <div id="projectsTemplate" style="display: none;">
+                  <div class="col-lg-4 col-md-4 all">
+                    <div class="product-item">
+                      <div class="down-content">
+                        <h4 class="project-name">CCC (Name)</h4>
+                        <h6 class="project-status">Failed (Status)</h6>
+                        <p class="project-token-name">Token Name: CCC </p> 
+                        <p class="project-apy">Interest Rate: 2.5%</p>
+                        <div class="w3-light-grey">
+                          <div class="w3-container w3-red w3-center" style="width:50%">50%</div>
+                        </div><br>
+                        <span class="project-total-raised">5000/10000 CCC (totalRaised)</span>
+                      </div>
+                      <button class="btn-MoreInfo">More Info</button>
+                    </div>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inner-content">
+          <p>Copyright &copy; 2021 CryptPad Sdn.Bhd.
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/owl.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/accordions.js"></script>
+
+<script language = "text/Javascript"> 
+  cleared[0] = cleared[1] = cleared[2] = 0; 
+  function clearField(t){                  
+  if (!cleared[t.id]) {                      
+      cleared[t.id] = 1;  
+      t.value='';        
+      t.style.color='#fff';
+      }
+  }
+</script>
+
+<script>
+   // //https://stackoverflow.com/questions/9642205/how-to-force-a-script-reload-and-re-execute
+  function load_js(src) {
+    $('script[src="' + src + '"]').remove();
+    $('<script>').attr('src', src).appendTo('head');
+  }
+
+  setTimeout(function() { load_js('js/custom.js')}, 1000);
+</script>
+</body>
+</html>

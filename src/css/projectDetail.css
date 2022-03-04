@@ -1,0 +1,11 @@
+#projectDetail h1 {
+  color:#f33f3f;
+}
+
+#projectDetail span {
+  font-size: medium;
+}
+
+.admin-ciew {
+  display:block;
+}

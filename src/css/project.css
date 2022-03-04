@@ -1,0 +1,44 @@
+#btn-investproj, #btn-conclude, .btn-MoreInfo {
+	background-color: #f33f3f;
+	color: #fff;
+	font-size: 14px;
+	text-transform: capitalize;
+	font-weight: 300;
+	padding: 10px 20px;
+	border-radius: 5px;
+	display: inline-block;
+	transition: all 0.3s;
+    border: none;
+	outline: none;
+	cursor: pointer;
+    text-align: center;
+    margin: -2% auto 5% auto;
+    display: grid;
+}
+
+#btn-investproj:hover, #btn-conclude:hover,.btn-MoreInfo:hover {
+	background-color: #121212;
+	color: #fff;
+}
+
+.w3-red, .w3-hover-red:hover {
+    color: #fff!important;
+    background-color: #F77D7D!important;
+}
+
+#btn-investproj, #btn-conclude {
+    padding: 20px;
+	font-size: large;
+	margin-left: 50px;
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+
+.inner
+{
+    display: inline-block;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Launchpad - Investment Page</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/cryptPad.css">
+    <link rel="stylesheet" href="css/owl.css">
+
+    <style>
+      table{
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th{
+        font-weight:bold;
+        text-align: center;
+      }
+      td{
+        width: 10%;
+        text-align: center;
+        padding: 10px 15px;
+      }
+  </style>
+  </head>
+
+  <body>
+
+    <!-- ** Preloader Start ** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ** Preloader End ** -->
+
+       <!-- Header -->
+       <header class="">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><h2>CryptPad <em>Launchpad</em></h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="home">
+                  <a class="nav-link" href="index.html">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li> 
+                <li class="nav-item active" id="user_profile">
+                  <a class="nav-link" href="investmentUser.html">Profile</a>
+                </li>
+                <li class="nav-item" id="admin_add_project">
+                  <a class="nav-link" href="addProject.html">Add Project</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+     <!-- Page Content -->
+     <div class="page-heading products-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>My Transactions</h4>
+              <h2></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br>
+
+    <table id="transRow">
+      <tr>
+        <th>Project Name</th>
+        <th>Project Address</th>
+        <th id='tokenValue'>Token Value</th>
+        <th id='purchaseAmount'>Purchase Amount</th>
+        <th>Interest Earned</th><th>Total Token</th>
+      </tr>
+      <tr id="transTemplate" style="display: none;">
+        <td class="projName"></td>
+        <td class="projAddress"></td>
+        <td class="tokenValue"></td>
+        <td class="purchaseAmount"></td>
+        <td class="interestEarned"></td>
+        <td class="totalToken"></td>
+      </tr>
+    </table>
+
+    <br><br><br>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright &copy; 2021 CryptPad Sdn.Bhd.
+              </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/custom.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/accordions.js"></script>
+
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; 
+      function clearField(t){                  
+      if (! cleared[t.id]) {                      
+          cleared[t.id] = 1;  
+          t.value='';        
+          t.style.color='#fff';
+          }
+      }
+    </script>
+  </body>
+</html>

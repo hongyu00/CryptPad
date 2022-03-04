@@ -1,0 +1,33 @@
+[
+    {
+      "projectId": "0",
+      "projectName": "KFC New Project",
+      "projectDescription": "KFC is Good! Join Us Now!",
+      "hasSettledPayment": "true",
+      "projectSuccess": "true",
+      "tokenName": "KFC",
+      "tokenValue": "1250000000000000000",
+      "interestRate": "143",
+      "projectDuration": "13",
+      "fundraiseGoal": "500000000000000000000",
+      "totalRaised": "500000000000000000000",
+      "projectAddress": "0xa798a8d0093C12C489FAa53Cc2CeAAbc02350a9F",
+      "dateCreated": "1639673191"
+    },
+    {
+        "projectId": "1",
+        "projectName": "Sushi King New Launch",
+        "projectDescription": "Sushi is Delicious! Wuhooo",
+        "hasSettledPayment": "true",
+        "projectSuccess": "false",
+        "tokenName": "SSK",
+        "tokenValue": "1550000000000000000",
+        "interestRate": "123",
+        "projectDuration": "20",
+        "fundraiseGoal": "100000000000000000000",
+        "totalRaised": "5000000000000000000",
+        "projectAddress": "0x9FDaB72eC38896486f62A67Cc6A7bd64beAb2a7c",
+        "dateCreated": "1639673563"
+    }
+  ]
+    

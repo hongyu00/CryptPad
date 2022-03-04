@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Launchpad - Product Page</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/cryptPad.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/projectDetail.css">
+    <link rel="stylesheet" href="css/addProject.css">
+    <link rel="stylesheet" href="css/project.css">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+        <!-- Header -->
+        <header class="">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand" href="index.html"><h2>CryptPad <em>Launchpad</em></h2></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active" id="home">
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li> 
+                  <li class="nav-item" id="user_profile">
+                    <a class="nav-link" href="investmentUser.html">Profile</a>
+                  </li>
+                  <li class="nav-item" id="admin_add_project">
+                    <a class="nav-link" href="addProject.html">Add Project</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+    <!-- Page Content -->
+    <div class="page-heading products-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>Crytocurrencies project</h4>
+              <h2>Project Detail</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="common">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Project Information</h2>
+            </div>
+          </div>
+
+          <fieldset style="width:1000px; margin-left:50px;">
+              <table>
+                  <tr>
+                      <td class="w-50">Project Name</td>
+                      <td class="w-50"><span id="projName">League of Ancient</span></td>
+                  </tr>
+                  <tr>
+                      <td>Description</td>
+                      <td><span id="projDesc">This is a description</span></td>
+                  </tr>
+                  <tr>
+                      <td>Token Name</td>
+                      <td><span id="tokenName">LOA</span></td>
+                  </tr>
+                  <tr>
+                      <td>Token Value</td>
+                      <td><span  id="tokenValue">0.1</span> ETH</td>
+                  </tr>
+                  <tr>
+                      <td>Interest Rate</td>
+                      <td><span  id="apy">10</span>%</td>
+                  </tr>
+                  <tr>
+                      <td>Project Period</td>
+                      <td ><span id="farmPeriod">60</span> days</td>
+                  </tr>
+                  <tr>
+                    <td>Project Address</td>
+                    <td><span id="projAddr">0x195EE774f6ab47FbF626486D89d348A1f555F828</span></td>
+                </tr>
+                  <tr>
+                      <td>Funraised Goal</td>
+                      <td><span id="goal">10</span> token</td>
+                  </tr>
+                  <tr>
+                    <td>Token Sold</td>
+                    <td><span id="sold">0</span> token</td>
+                </tr>                 
+                  <tr>
+                      <td>Current Project Progress</td>
+                      <td>
+                          <div class="progress">
+                          <div id="projProgressView" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"><span id="projProgress">25%</span></div>
+                          </div>  
+                  </td>
+                  </tr>
+              </table>
+      
+               <br/><br/>
+
+              <span class="inactive">Purchase Token</span>
+              <input type="number" id="buyAmount" name="buyAmount" class="inactive">
+
+            </fieldset>
+            <div id="outer">
+              <div class="inner"><button id="btn-investproj" type="button">Invest</button></div>          
+              <div class="inner"><button id="btn-conclude" type="button">Conclude</button></div>  
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright &copy; 2021 CryptPad Sdn.Bhd.
+              </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="jquery/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+
+  <script src="js/custom.js"></script>
+  <script src="js/owl.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/isotope.js"></script>
+  <script src="js/accordions.js"></script>
+
+  <script language = "text/Javascript"> 
+    cleared[0] = cleared[1] = cleared[2] = 0; 
+    function clearField(t){                  
+    if (! cleared[t.id]) {                      
+        cleared[t.id] = 1;  
+        t.value='';        
+        t.style.color='#fff';
+        }
+    }
+  </script>
+</html>
