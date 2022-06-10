@@ -1,7 +1,7 @@
 App = {
   web3Provider: null,
   contracts: {},
-  adminAccount: "0x9E417B38dB374B22221715EB9A092FB0Cb70EE13".toLowerCase(),
+  adminAccount: "0xDa3C008eFC2E8416C471ae459039Ec52C809fB9a".toLowerCase(),
   
   init: async function() {
     return await App.initWeb3();
@@ -97,6 +97,8 @@ App = {
       return launchpadInstance.getProjectLength();
     }).then(function(result) {
       var arrayLength = result.c[0];
+      console.log("Sss" + arrayLength);
+
       var projectsRow = $('#projectsRow');
       var projectsTemplate = $('#projectsTemplate');
 
@@ -253,8 +255,8 @@ App = {
             if (web3.eth.accounts[0] != App.adminAccount) $('#btn-conclude').hide();
             else {
               $('#btn-investproj').hide();
-              
             }
+            if (web3.eth.accounts[0] == App.adminAccount) $('#btn-conclude').show();
       }).catch(function(err) {
         console.log(err.message);
       });
@@ -462,7 +464,10 @@ App = {
   
      App.contracts.Launchpad.deployed().then(function(instance) {
       launchpadInstance = instance;
-        
+        console.log("proj addr: " + projAddr);
+        console.log("buy amount: " + buyAmount);
+        console.log("investor account: " + account);
+        console.log("Wei to be paid: "+web3.toWei(paidEth, 'ether'));
         return launchpadInstance.invest(projAddr, buyAmount, {from: account, value:(web3.toWei(paidEth, 'ether'))}).call; //  call func in smart contract
       });
     })

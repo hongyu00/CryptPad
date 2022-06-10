@@ -34,7 +34,7 @@ contract CryptPad {
     uint public projCount = 0;
     uint totalRaised = 0;
     uint public transactionCount = 0;
-    address payable platformAddress = 0x9E417B38dB374B22221715EB9A092FB0Cb70EE13;
+    address payable platformAddress = 0xDa3C008eFC2E8416C471ae459039Ec52C809fB9a;
 
     address admin;
     Project[] project;
@@ -51,16 +51,8 @@ contract CryptPad {
         _;
     }
 
-     modifier chkValidity(address projAddr, uint buyAmount){
-        //require(projects[projAddr].projectStatus == ProjectStatus.Launch, "Project has yet to start or has ended");
-        uint duration = projects[projAddr].projectDuration * 1 minutes;
-        require(block.timestamp < (projects[projAddr].dateCreated + duration), "Project has ended!!!");
-        require(msg.value == (buyAmount * projects[projAddr].tokenValue), "Insufficient fund to purchase");
-        _;
-    }
-
-    //for Invest in new project/ multiple projects + Add investment
-    function invest( address projAddr, uint buyAmount) public payable chkValidity(projAddr, buyAmount){
+    
+    function invest( address projAddr, uint buyAmount) public payable{
         
         //(bool sent, ) = platformAddress.call {value:msg.value} ("");
         //require(sent, "Failed to send Ether");
@@ -87,45 +79,23 @@ contract CryptPad {
             return (a / b * 100);
     }
 
-    modifier chkStatus(address projAddr){
-        require(projects[projAddr].hasSettledPayment == false, "Payment has been settled!");
-        uint duration = projects[projAddr].projectDuration * 1 minutes;
-        require(block.timestamp >= (projects[projAddr].dateCreated + duration), "Project has not ended yet!!!");
-        _;
-    }
-
-    function concludeTransaction(address payable projAddr) public payable chkStatus(projAddr){
-        //require(projects[projAddr].projectStatus == ProjectStatus.End, "Project has not ended yet");
+   
+    function concludeTransaction(address payable projAddr) public payable{
         if(projects[projAddr].fundraiseGoal == projects[projAddr].totalRaised){
-            //give to project address
-            //bool sent = projAddr.send((projects[projAddr].fundraiseGoal*(projects[projAddr].tokenValue)));
             address(projAddr).transfer(msg.value);
-            //bool sent = projAddr.send(msg.value);
-            
-            //require(sent, "Failed to send Ether1");
-            //distribute token along with annualPercentageYield
-            // for(uint i=0; i < transaction.length; i++){
-            //     if(transaction[i].projectAddress == projAddr){
-            //         uint apy = (((1 + ((projects[projAddr].annualPercentageYield/10000)/projects[projAddr].farmingPeriod))**(projects[projAddr].farmingPeriod))-1)*four_decimals_value;
-            //         transaction[i].amount = (transaction[i].amount + ((transaction[i].amount * apy)));
-            //      }
-            // }
             projects[projAddr].hasSettledPayment = true;
             projects[projAddr].projectSuccess = true;
         }
         else{
            //refund
             for(uint i=0; i < transaction.length; i++){
-            //address payable investorAddr = transaction[i].investorAddress;
                 if(transaction[i].projectAddress == projAddr){
                     uint refundAmount = projects[projAddr].tokenValue * transaction[i].amount;
                     bool sent = transaction[i].investorAddress.send(refundAmount*eighteen_decimals_value);
-                     //(bool sent,) = transaction[i].investorAddress.call(abi.encode(refundAmount));
                      require(sent, "Failed to send Ether2");
-                    //payable(investorAddr).transfer(transaction[i].amount);
                     //update token value
                     transaction[i].amount = 0;
-                    transction[i].interest = 0;
+                    transaction[i].interest = 0;
                  }
              }
             projects[projAddr].projectSuccess = false;
